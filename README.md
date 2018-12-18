@@ -1,5 +1,18 @@
 ## Customised Css on Antd For New Design System
 
+
+## Setup
+```
+$ npm install
+
+$ npm start
+```
+
+## Publish
+```
+$ npm run pub
+```
+
 <p align="center">
   <a href="http://ant.design">
     <img width="200" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
