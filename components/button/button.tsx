@@ -48,6 +48,7 @@ export interface BaseButtonProps {
   className?: string;
   ghost?: boolean;
   block?: boolean;
+  roundEdges?: boolean,
   children?: React.ReactNode;
 }
 
@@ -73,6 +74,7 @@ export default class Button extends React.Component<ButtonProps, any> {
     loading: false,
     ghost: false,
     block: false,
+    roundEdges: false,
   };
 
   static propTypes = {
@@ -85,6 +87,7 @@ export default class Button extends React.Component<ButtonProps, any> {
     className: PropTypes.string,
     icon: PropTypes.string,
     block: PropTypes.bool,
+    roundEdges: PropTypes.bool,
   };
 
   private delayTimeout: number;
@@ -168,7 +171,7 @@ export default class Button extends React.Component<ButtonProps, any> {
 
   render() {
     const {
-      type, shape, size, className, children, icon, prefixCls, ghost, loading: _loadingProp, block, ...rest
+      type, shape, size, className, children, icon, prefixCls, ghost, loading: _loadingProp, block, roundEdges, ...rest
     } = this.props;
 
     const { loading, hasTwoCNChar } = this.state;
@@ -197,6 +200,7 @@ export default class Button extends React.Component<ButtonProps, any> {
       [`${prefixCls}-background-ghost`]: ghost,
       [`${prefixCls}-two-chinese-chars`]: hasTwoCNChar,
       [`${prefixCls}-block`]: block,
+      [`${prefixCls}-roundEdges`]: roundEdges,
       christmas: isChristmas,
     });
 

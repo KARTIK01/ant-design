@@ -1,4 +1,4 @@
-## Customised Css on Antd For New Design System.s
+## Customised Css on Antd For New Design System
 
 <p align="center">
   <a href="http://ant.design">

@@ -28,6 +28,7 @@ To get a customized button, just set `type`/`shape`/`size`/`loading`/`disabled`.
 | type | can be set to `primary` `ghost` `dashed` `danger`(added in 2.7) or omitted (meaning `default`) | string | `default` |
 | onClick | set the handler to handle `click` event | (event) => void | - |
 | block | option to fit button width to its parent width | boolean | `false` |
+| roundEdges | option to give rounded edges to button | boolean | `false` |
 
 It accepts all props which native button support.
 
