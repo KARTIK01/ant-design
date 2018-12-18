@@ -10,7 +10,7 @@ $ npm start
 
 ## Publish
 ```
-$ npm run pub
+$ npm run dist && npm run compile && npm publish --public
 ```
 
 <p align="center">
