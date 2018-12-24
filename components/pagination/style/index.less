@@ -33,7 +33,7 @@
 
   &-item {
     cursor: pointer;
-    border-radius: @border-radius-base;
+    //border-radius: @border-radius-base;
     user-select: none;
     min-width: @pagination-item-size;
     height: @pagination-item-size;
@@ -42,7 +42,7 @@
     list-style: none;
     display: inline-block;
     vertical-align: middle;
-    border: @border-width-base @border-style-base @border-color-base;
+    //border: @border-width-base @border-style-base @border-color-base;
     background-color: @component-background;
     margin-right: 8px;
     font-family: @pagination-font-family;
@@ -65,7 +65,8 @@
     }
 
     &-active {
-      border-color: @primary-color;
+      //border-color: @primary-color;
+      border-bottom: @border-width-base @border-style-base @primary-color;
       font-weight: @pagination-font-weight-active;
 
       a {
@@ -169,7 +170,7 @@
     }
 
     .@{pagination-prefix-cls}-item-link {
-      border: @border-width-base @border-style-base @border-color-base;
+      //border: @border-width-base @border-style-base @border-color-base;
       background-color: @component-background;
       border-radius: @border-radius-base;
       outline: none;
