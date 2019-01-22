@@ -61,6 +61,7 @@ const columns = [{
 | defaultExpandedRowKeys | Initial expanded row keys | string\[] | - |
 | expandedRowKeys | Current expanded row keys | string\[] | - |
 | expandedRowRender | Expanded container render for each row | Function(record, index, indent, expanded):ReactNode | - |
+| expandIcon | Customize row expand Icon. Ref [example](http://react-component.github.io/table/examples/expandIcon.html) | Function(props):ReactNode | - |
 | expandRowByClick | Whether to expand row by clicking anywhere in the whole row | boolean | `false` |
 | footer | Table footer renderer | Function(currentPageData) |  |
 | indentSize | Indent size in pixels of tree data | number | 15 |
@@ -86,11 +87,13 @@ Same as `onRow` `onHeaderRow` `onCell` `onHeaderCell`
 
 ```jsx
 <Table
-  onRow={(record) => {
+  onRow={(record, rowIndex) => {
     return {
-      onClick: () => {},       // click row
-      onMouseEnter: () => {},  // mouse enter row
-      onXxxx...
+      onClick: (event) => {},       // click row
+      onDoubleClick: (event) => {}, // double click row
+      onContextMenu: (event) => {}  // right button click row
+      onMouseEnter: (event) => {}   // mouse enter row
+      onMouseLeave: (event) => {}   // mouse leave row
     };
   }}
   onHeaderRow={(column) => {
